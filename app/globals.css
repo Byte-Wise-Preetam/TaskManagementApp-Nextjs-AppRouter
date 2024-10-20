@@ -17,11 +17,384 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "Poppins", sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Global Parent component css starts here*/
+
+.TaskManagementApp{
+  max-width: 925px;
+  padding: 0 1rem;
+  height: 92vh;
+  overflow: auto;
+  margin: auto;
+}
+
+.TaskManagementApp main{
+  width: 100%;
+}
+
+/* Global Parent component css ends here*/
+
+/*    header CSS starts here    */
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.header__heading{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.header__actions{
+
+}
+
+.header__actions .searchBar{
+  border: 2px solid black;
+  height: 40px;
+  padding-left: 0.5rem;
+  width: 225px;
+}
+
+.header__actions .addTask{
+  background-color: #000;
+  color: #fff;
+  padding: 0 1rem;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+/*    header CSS ends here    */
+
+/*    footer CSS starts here    */
+
+footer{
+  position: absolute;
+  width: 100%;
+  bottom: 1rem;
+  left: 50%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+  background-color: #fff;
+  padding-top: 0.5rem;
+}
+
+/*    footer CSS starts here    */
+
+/* TaskList css starts here */
+
+.tasksWrapper{
+
+}
+
+/* TaskList css ends here */
+
+
+
+/* Task css starts here */
+.task{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  min-height: 125px;
+  border: 2px solid black;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+}
+
+.task__info{
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.task__info .name{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.task__info .description{
+  font-size: 1.15rem;
+}
+
+.task__actions{
+  min-width: 25%;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.task__actions__text{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.task__actions__text .status{
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-right: 1rem;
+}
+
+.task__actions__text .priority{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.high{
+  background-color: red;
+}
+
+.medium{
+  background-color: yellow;
+}
+
+.low{
+  background-color: green;
+}
+
+.task__actions__buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task__actions__buttons button{
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+/* Task css starts here */
+
+/* Form CSS starts Here */
+
+.formWrapper{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.taskForm{
+  width: 400px;
+  padding: 1.5rem;
+  background-color: #fff;
+
+}
+
+.taskForm__cancel{
+  font-size: 1rem;
+  text-align: end;
+  margin: auto;
+  color: red;
+}
+
+.taskForm__input{
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 1.5rem auto;
+  border: 2px solid #000;
+  padding-left: 0.5rem;
+}
+
+.taskForm__select{
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 1.5rem auto;
+  border: 2px solid #000;
+}
+
+.taskForm__submit{
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Form CSS starts Here */
+
+@media screen and (max-width:992px){
+  /* Global Parent component css starts here*/
+
+  .TaskManagementApp{
+    max-width: 765px;
+    padding: 0 1rem;
+    height: 95vh;
+  }
+
+  /* Global Parent component css ends here*/
+
+  /* header css starts here*/
+
+  .header__heading{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  /* header css ends here*/
+}
+
+@media screen and (max-width:768px){
+  /* Global Parent component css starts here*/
+
+  .TaskManagementApp{
+    max-width: 576px;
+    padding: 0 1rem;
+    height: 95vh;
+  }
+
+  /* Global Parent component css ends here*/
+
+  /* header css starts here*/
+
+  .header__heading{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .header__heading{
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .header__actions .searchBar{
+    height: 38px;
+  }
+
+  /* header css ends here*/
+}
+
+@media screen and (max-width:576px){
+
+  /* header css starts here*/
+
+  .header__actions .searchBar{
+    width: 175px;
+  }
+
+  .header__heading{
+    font-size: 1.15rem;
+  }
+
+  /* header css ends here*/
+
+  /* task css starts here*/
+
+  .task{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    min-height: 125px;
+    border: 2px solid black;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    position: relative;
+  }
+
+  .task__info{
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .task__info .name{
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .task__info .description{
+    font-size: 1rem;
+  }
+
+  .task__actions{
+    width: 100%;
+    height: initial;
+    margin-top: 1.5rem;
+  }
+
+  .task__actions__text{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .task__actions__buttons button{
+    margin-left: 0;
+  }
+
+  /* task css ends here*/
+
+  /* task Form css starts here*/
+
+  .taskForm{
+    width: 90%;
+  
+  }
+
+  /* task Form css ends here*/
+
+  /* footer css starts here*/
+
+  footer{
+    font-size: 0.75rem;
+  }
+
+  /* footer css ends here*/
 }

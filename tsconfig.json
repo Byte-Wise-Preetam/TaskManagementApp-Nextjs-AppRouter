@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/utils/fetchTasks.js", "app/components/TaskList.jsx", "app/components/TaskForm.jsx", "app/components/Task.jsx"],
   "exclude": ["node_modules"]
 }
